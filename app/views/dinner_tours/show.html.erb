@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @dinner_tour.title %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @dinner_tour.notes %>
+</p>
+
+<%= link_to 'Edit', edit_dinner_tour_path(@dinner_tour) %> |
+<%= link_to 'Back', dinner_tours_path %>

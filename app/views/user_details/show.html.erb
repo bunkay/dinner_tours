@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @user_detail.FirstName %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @user_detail.LastName %>
+</p>
+
+<p>
+  <strong>Selecttour:</strong>
+  <%= @user_detail.SelectTour %>
+</p>
+
+<p>
+  <strong>Tourdescription:</strong>
+  <%= @user_detail.TourDescription %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @user_detail.Time %>
+</p>
+
+<%= link_to 'Edit', edit_user_detail_path(@user_detail) %> |
+<%= link_to 'Back', user_details_path %>

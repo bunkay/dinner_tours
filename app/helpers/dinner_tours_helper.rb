@@ -1,0 +1,2 @@
+module DinnerToursHelper
+end

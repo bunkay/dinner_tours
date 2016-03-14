@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User Details</h1>
+<div class="container">
+<div class="table-responsive">
+  <table class="table">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Selecttour</th>
+      <th>Tourdescription</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+   
+            
+    <% @user_details.each do |user_detail| %>
+      <tr>
+        <td><%= user_detail.FirstName %></td>
+        <td><%= user_detail.LastName %></td>
+        <td><%= user_detail.SelectTour %></td>
+        <td><%= user_detail.TourDescription %></td>
+        <td><%= user_detail.Time %></td>
+        </tr>
+          <tr>
+          <ul class="nav nav-tabs" role="tablist"> 
+          <td><%= link_to 'Show', user_detail %></td>
+          <td><%= link_to 'Edit', edit_user_detail_path(user_detail) %></td>
+          <td><%= link_to 'Destroy', user_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        </tr>
+      </ul>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+<br>
+
+<%= link_to 'New User detail', new_user_detail_path %>

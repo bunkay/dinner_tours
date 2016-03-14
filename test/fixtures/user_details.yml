@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  FirstName: MyString
+  LastName: MyString
+  SelectTour: MyString
+  TourDescription: MyString
+  Time: 9.99
+
+two:
+  FirstName: MyString
+  LastName: MyString
+  SelectTour: MyString
+  TourDescription: MyString
+  Time: 9.99

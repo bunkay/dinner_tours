@@ -1,0 +1,49 @@
+<!-- app/views/layouts/application.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DinnerTours</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body> 
+   <%= render 'devise/shared/navigation' %>
+
+   <!--  main container -->
+<div id="main-container" class="container-fluid">
+   <div class="row">
+     <div class="col-xs-3"></div>
+      
+   <!-- sidebar content -->
+   <div id="sidebar" class="col-xs-3">
+   <h3>Dublin DinnerTours</h3>
+   </div>
+   <!-- main content -->
+   
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+     
+    <%= yield %>
+    <% if user_signed_in? %>
+    <div>Signed in as... <%= current_user.email %>
+    (<%= link_to 'Sign out', destroy_user_session_path,:method => :delete%>)
+    </div>
+        <% else %>
+        <%= link_to 'Register', new_user_registration_path %> or
+        <%= link_to 'Sign in', new_user_session_path %>
+        <%= link_to 'Profile', profile_path %>
+        <%= link_to 'login', home_index_path %>
+        <%= link_to 'logout', home_index_path %>
+        <%= link_to 'signup', home_index_path %>
+        <%= link_to 'contact', home_index_path %>
+        <%= link_to 'Create_Tour', new_dinner_tour_path %>
+        <%= link_to 'dinner_tour', new_dinner_tour_path %>
+        <% end %>
+       </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+

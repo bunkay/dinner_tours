@@ -1,0 +1,19 @@
+<!--  app/views/todos/new.html.erb -->
+<h1>New Dinner Tour</h1>
+
+<%= render 'form' %>
+<%= link_to 'Back', home_index_path %>
+<%= link_to 'Back', new_dinner_tour_path %>
+
+
+
+<ul class="nav nav-tabs" role="tablist">
+  <li><%= link_to 'View list', dinner_tour_path %></li>
+  <li class="active"><%= link_to 'dinner_tours', dinner_tour_path %></li>
+</ul>
+
+<h1>Dinner Tours</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', dinner_tour_path %>

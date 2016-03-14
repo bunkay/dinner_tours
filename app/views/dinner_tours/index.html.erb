@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<div class="WELCOME">
+<table class="layout display responsive-table">
+  <table class="table">-->
+      <h1>DubTours</h1>       
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Notes</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            
+          <% @dinner_tours.each do |dinner_tour| %>
+              <td><%= dinner_tour.title %></td>
+              <td><%= dinner_tour.notes %></td>
+              <td><%= link_to 'Show', dinner_tour, class: 'btn btn-primary btn-xs' %></td
+              
+              <% if current_user.admin? %>
+              
+                <td><%= link_to 'Edit', edit_dinner_tour_path(dinner_tour), class: 'btn btn-info btn-xs' %></td>
+                <td><%= link_to 'Destroy', dinner_tour, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
+                <td><%= link_to 'Add New Tour', new_dinner_tour_path, class: 'btn btn-success' %></td>   
+              <% end %>
+              
+          <% end %>
+  </tbody>s
+</table></table>
+</div>
+  <% if user_signed_in? %>
+<% end %> 
