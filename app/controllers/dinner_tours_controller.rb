@@ -74,10 +74,11 @@ class DinnerToursController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_dinner_tour
       @dinner_tour = DinnerTour.find(params[:id])
+      if dinner_tour.try(:update_attributes, dinner_tour_params)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dinner_tour_params
       params.require(:dinner_tour).permit(:title, :notes)
     end
-end
+    end
